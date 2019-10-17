@@ -25,6 +25,12 @@ function nextSequence() {
 //el boton que se clickea se guarda en el array correspondiente
 //y se llama la funcion del sonido de ese boton
 //se llama la funcion para que haga el flash
+$(".start-btn").click(function(){
+
+  nextSequence();
+
+});
+
 $(".btn").click(function(){
 
   var userChosenColor = this.getAttribute("id");
@@ -73,8 +79,7 @@ if (!started) {
 
 
 //hay que averiguar de todos los clicks (userClickedPattern), el ultimo index y pasarlo a la funcion checkAnswers
-//Problema: Conseguimos el index del ultimo boton pulsado, pero solo la primera vez que se pulsa dicho boton,
-//puesto que ya ha sido pulsado antes, devuelve el primer index. Tendria que dar el ultimo index de ese boton (?)
+
 
 function checkAnswers(currentLevel){
 
